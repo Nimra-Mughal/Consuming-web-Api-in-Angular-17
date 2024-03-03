@@ -1,0 +1,57 @@
+<div>
+  @if(isedit){
+    <h4>Edit Employee </h4>
+  }
+  @else {
+    <h4>Create Employee Form</h4>
+
+  }
+    <h4>Create Employee Form</h4>
+    <form [formGroup]="employeeform" (ngSubmit)="save()">
+        <div class="w-full flex flex-wrap">
+            <mat-form-field class="w-full">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" placeholder="Name" formControlName="name">
+              </mat-form-field>   
+        </div>
+        <div class="w-full flex flex-wrap">
+            <mat-form-field class="w-full">
+                <mat-label>Gender</mat-label>
+                <input matInput type="text" placeholder="Gender" formControlName="gender">
+              </mat-form-field>   
+        </div>
+        <div class="w-full flex flex-wrap">
+            <mat-form-field class="w-full">
+                <mat-label>Age</mat-label>
+                <input matInput type="number" placeholder="Age" formControlName="age">
+              </mat-form-field>   
+        </div>
+        <div class="w-full flex flex-wrap">
+            <mat-form-field class="w-full">
+                <mat-label>standard</mat-label>
+                <input matInput type="number" placeholder="Standard" formControlName="standard">
+              </mat-form-field>   
+        </div>
+        <div class="w-full flex flex-wrap">
+            <mat-form-field class="w-full">
+                <mat-label>Father Name</mat-label>
+                <input matInput type="text" placeholder="Father Name" formControlName="fathername">
+              </mat-form-field>   
+        </div>
+        @if(isedit){
+            <div class="flex justify-center">
+                <button mat-raised-button color="primary">Update</button>
+            </div>
+        }
+        @else {
+            <div class="flex justify-center">
+                <button mat-raised-button color="primary">Save</button>
+            </div>
+        }
+       
+
+
+
+
+    </form>
+</div>
